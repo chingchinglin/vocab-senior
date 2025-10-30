@@ -306,7 +306,7 @@ const speak = (rawText) => {
 
       const multiSplit = (text) => {
         const out = []; let token = ""; const str = String(text);
-        const isDelim = (ch) => /[,;\/，、\n\r]/.test(ch);
+        const isDelim = (ch) => /[,;，、\n\r]/.test(ch);
         for (let i=0; i<str.length; i++) {
           const ch = str[i];
           if (isDelim(ch)) { if (token) out.push(token); token = ""; } else { token += ch; }
